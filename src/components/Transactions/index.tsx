@@ -13,6 +13,7 @@ export const Transactions: TransactionsComponent = ({ transactions }) => {
         transactionId,
         value: newValue,
       })
+      clearCacheByEndpoint(["transactionsByEmployee", "paginatedTransactions"])
     },
     [fetchWithoutCache, clearCacheByEndpoint]
   )
